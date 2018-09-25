@@ -1,0 +1,29 @@
+#include <iostream>
+#include<string>
+using namespace std;
+
+int main() {
+string s,b;b="";int i;
+cin>>s;
+    
+for(i=0;i<=s.length();i++)
+{
+    if(s[i]==',')
+    {
+         cout<<b<<endl;
+        b="";
+    }
+    else{
+        
+  
+    b=b+s[i];
+    }
+       
+       
+        
+   
+}
+cout<<b;
+
+    return 0;
+}
