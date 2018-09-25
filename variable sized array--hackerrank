@@ -7,18 +7,40 @@ using namespace std;
 
 
 int main() {
-     
-  int n, k, x, y, q;
-cin >> n >> q;
-int *a[n];
-for (int i = -1; ++i < n;) {
-    cin >> k;
-    a[i] = new int[k];
-    for (int j = -1; ++j < k; cin >> a[i][j]);
-}
-while(q--){
-    cin >> x >> y;
-    cout << a[x][y] << endl;
-}
-	return 0;
+    int N, Q;
+    cin>>N>>Q;
+   string s="", index="";
+    for(int n=0; n<N; n++){
+        int k;
+        cin>>k;
+        int A[k];
+        for(int j=0; j<k; j++){
+            cin>>A[j];
+            s = s + to_string(A[j]);
+           
+        }
+        index = index + to_string(k);
+
+   }
+    int a, b;
+    for(int q=0; q<Q; q++){
+        cin>>a>>b;
+        if(a==0){
+            cout<<s[b]<<endl;
+        }
+        else{
+            int sum=0;
+            
+           for(int i=0;i<a;i++){
+                sum = sum + int(index[i]);
+               sum-=48;
+         
+            }
+         
+            cout<<s[sum+b]<<endl;
+        }
+    }
+cout<<s;
+
+    return 0;
 }
