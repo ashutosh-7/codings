@@ -2,6 +2,7 @@
 #include<string>
 #include<algorithm>
 #include<cmath>
+#include <boost/algorithm/string.hpp>
 using namespace std;
 
 int main() {
@@ -13,17 +14,20 @@ int main() {
 	sum=0;
 	cin>>s;
 	string give;
+  transform(s.begin(), s.end(), s.begin(), ::toupper); 
 	give="@ZYXWVUTSRQPONMLKJIHGFEDCBA";
 		n=s.size();
-		x=n;
+		x=n-1;
 		for(int i=0;i<n;i++)
 		{
 		q=s[i];
 			size_t found = give.find(q);
-			sum=sum+pow(found,x);
+			sum=sum+found*(pow(26,x));
+			
+		
 			x--;
 		}
-		cout<<sum+25;
+		cout<<sum;
 		
 	
 	return 0;
