@@ -1,0 +1,30 @@
+#include <iostream>
+#include<string>
+#include<algorithm>
+#include<cmath>
+using namespace std;
+
+int main() {
+	
+	int n,m,x;
+	long long sum;
+	string s;
+	string q;
+	sum=0;
+	cin>>s;
+	string give;
+	give="@ZYXWVUTSRQPONMLKJIHGFEDCBA";
+		n=s.size();
+		x=n;
+		for(int i=0;i<n;i++)
+		{
+		q=s[i];
+			size_t found = give.find(q);
+			sum=sum+pow(found,x);
+			x--;
+		}
+		cout<<sum+25;
+		
+	
+	return 0;
+}
