@@ -2,8 +2,9 @@
 using namespace std;
 
 int main() {
-	int m,n,c=0;
+	int m,n,c=0,d=0,e=0,f=0;
 	cin>>m>>n;
+	d=m;e=n;
 	if(m>n)
 	{
 		while(m>n)
@@ -36,6 +37,11 @@ int main() {
 			c++;
 	}
 	}
+if(d==1&&e==1)
+{
+	cout<<"0";
+}
+else
 	cout<<c;
 	return 0;
 }
