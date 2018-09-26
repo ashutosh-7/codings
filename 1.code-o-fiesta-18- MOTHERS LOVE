@@ -35,10 +35,10 @@ if(found<1000)
 }
 if(count==26)
 {
-	cout<<"MOTHER'S LOVE";
+	cout<<"MOTHERS LOVE";
 }
 else{
-	cout<<" NOT MOTHER'S LOVE";
+	cout<<" NOT MOTHERS LOVE";
 }
 	return 0;
 }
