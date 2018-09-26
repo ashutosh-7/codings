@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-	int m,n,c=0,d=0,e=0,f=0;
+	int m,n,c=0;
 	cin>>m>>n;
 	if(m>n)
 	{
