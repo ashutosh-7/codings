@@ -1,0 +1,44 @@
+#include <iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+
+int main() {
+	string s;
+	getline(cin,s);
+
+  transform(s.begin(), s.end(), s.begin(), ::toupper); 
+ 
+	string give;
+	give="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	int n,count=0,i;
+	n=s.size();
+	for( i = 0; i < n; i++)
+     {
+          switch(s[i])
+          {
+               case ' ':
+               s[i] = '@';
+               break;
+          }
+     }
+    
+     
+	for(i=0;i<26;i++)
+	{
+size_t found=s.find(give[i]);
+if(found<1000)
+{
+	count++;
+}
+
+}
+if(count==26)
+{
+	cout<<"MOTHER'S LOVE";
+}
+else{
+	cout<<" NOT MOTHER'S LOVE";
+}
+	return 0;
+}
