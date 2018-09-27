@@ -1,0 +1,98 @@
+PROBLEM----
+
+You are given  integers.Sort the  integers and print the sorted order.
+Store the  integers in a vector.Vectors are sequence containers representing arrays that can change in size.
+
+Declaration:
+
+vector<int>v; (creates an empty vector of integers)
+Size:
+
+int size=v.size();
+Pushing an integer into a vector:
+
+v.push_back(x);(where x is an integer.The size increases by 1 after this.)
+Popping the last element from the vector:
+
+v.pop_back(); (After this the size decreases by 1)
+Sorting a vector:
+
+sort(v.begin(),v.end()); (Will sort all the elements in the vector)
+To know more about vectors, Click Here
+
+Input Format
+
+The first line of the input contains  where  is the number of integers. The next line contains  integers.
+Constraints
+
+, where  is the  integer in the vector.
+
+Output Format
+
+Print the integers in the sorted order one by one in a single line followed by a space.
+
+Sample Input
+
+5
+1 6 10 8 4
+Sample Output
+
+1 4 6 8 10
+
+
+
+
+
+
+
+
+SOLUTION---
+
+
+
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <bits/stdc++.h> 
+
+using namespace std;
+
+
+int main() {
+    int n,i,x,j;
+    cin>>n;
+    vector<int>v1;
+    for(i=0;i<n;i++){
+        cin>>x;
+        v1.push_back(x);
+    }
+    
+    int large,temp;
+    large=v1[0];
+   /* for(i=0;i<n;i++)
+    {
+       
+        for(j=1;j<n;j++)
+        {
+        if(large<v1[j])
+        {
+            temp=v1[j];
+            v1[j]=large;
+            v1[j-1]=temp;
+            
+            
+        }
+            else{
+                large=v1[j];
+            }
+        }
+    }*/
+    std::sort (v1.begin(), v1.begin()+5); 
+    for(i=0;i<n;i++){
+       cout<<v1[i]<<" ";
+    }
+    return 0;
+}
