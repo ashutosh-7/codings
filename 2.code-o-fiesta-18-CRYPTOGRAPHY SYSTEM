@@ -1,3 +1,36 @@
+PROBLEM--
+In a Forensic Department, experts use their own cryptographic system in order to protect their own information so that hackers cannot do any malicious activities.In their encoding system, Z is encoded as 1, Y is encoded as 2, and so on. Their encoding system are as follows :
+Z ---> 1
+Y ---> 2
+X ---> 3
+. .
+. .
+. .
+A ---> 26
+ZZ --> 27
+ZY --> 28
+Input
+First line contains a string P.
+
+Output
+Result contains an integer corresponding to their system.
+
+Sample Test Case : 
+
+Input
+
+ZN
+
+Output
+
+39
+
+
+
+
+
+Solutions--
+
 #include <iostream>
 #include<string>
 #include<algorithm>
