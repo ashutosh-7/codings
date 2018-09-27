@@ -1,3 +1,52 @@
+PROBLEM---
+In the game of PUBG, there are two friends in the same team, PUBG developers introduced a new health boost kit. Team has only single health boost kit . Initially, first and second player's health is p and q respectively . You can use health kit only after completion of a minute.
+In a single minute, player's health either decreases by 2 percent (if not using health kit) or boosts up by 1 percent (if using health kit).Game continues until both players are alive.If any of the player has 0 health, then game finishes.
+Hence, if at the beginning of a minute some player's health is 1 , he/she has to use the health kit, otherwise the team is eliminated. Find the maximum number of minutes that team can survive in a game of PUBG . Both players must be active throughout the whole game. Player's health has no limit.
+
+Input
+The first line of the input contains two positive numbers p and q(1 ≤ p,q≤ 100), the initial health of both players respectively.
+
+Output
+Output the maximum number of minutes that the team can last.
+
+Sample Test Case : 
+
+Input
+
+3  5
+
+Output
+
+6
+Explanation :
+at the beginning of the first minute health kit is taken by first player, by the end of this minute first player is at health 4, second is at 3
+
+continue the game without changing health kit, by the end of the second minute the first player health is at 5, second is at 1
+
+at the beginning of the third minute give health kit to the second player, after this minute the first player is at 3, the second one is at 2
+
+continue the game without changing health kit, by the end of the fourth minute first player health is at 1, second one is at 3
+
+at the beginning of the fifth minute health kit taken by first player, after this minute the first player is at 2, the second one is at 1
+
+at the beginning of the sixth minute health kit taken by second player, after this minute the first player is at 0, the second one is at 2
+
+After that the first player died and the game is stopped
+
+
+
+
+
+
+
+
+
+
+
+
+
+SOLUTION---
+
 #include <iostream>
 using namespace std;
 
