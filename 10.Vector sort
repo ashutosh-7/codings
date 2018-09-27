@@ -90,7 +90,7 @@ int main() {
             }
         }
     }*/
-    std::sort (v1.begin(), v1.begin()+5); 
+    std::sort (v1.begin(), v1.begin()+n); 
     for(i=0;i<n;i++){
        cout<<v1[i]<<" ";
     }
