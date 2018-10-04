@@ -1,0 +1,38 @@
+𝐏𝐫𝐨𝐛𝐥𝐞𝐦----
+
+𝐈𝐧 𝐡𝐚𝐜𝐤𝐞𝐫𝐫𝐚𝐧𝐤 𝐩𝐫𝐚𝐜𝐭𝐢𝐜𝐞 𝐬𝐞𝐬𝐬𝐢𝐨𝐧 𝐨𝐟 C++.
+
+
+
+
+𝐒𝐨𝐥𝐮𝐭𝐢𝐨𝐧𝐬----
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+   
+    int n;
+    vector<int>v1;
+    int i,j;int a1,a2,a3;
+    cin>>n;
+    for(i=0;i<n;i++)
+    {
+        int k;
+        cin>>k;
+        v1.push_back(k);
+    }
+    cin>>a1>>a2>>a3;
+    v1.erase(v1.begin()+a1-1);
+    v1.erase(v1.begin()+a2-1,v1.begin()+a3-1);
+    cout<<v1.size()<<endl;
+    for(i=0;i<v1.size();i++)
+    {
+        cout<<v1[i]<<" ";
+    }
+    return 0;
+}
